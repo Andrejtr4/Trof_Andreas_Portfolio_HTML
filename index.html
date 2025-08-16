@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensa Tracker</title>
+    <meta name="author" content="Andreas Trofimov" />
+    <meta name="keywords" content="Mensa, DHBW Karlsruhe, Erzbergerstraße, Ernährungstagebuch" />
+    <meta name="description" content="Ernährungstagebuch mit Speisen aus der Mensa" />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="ueberschrift">
+          <h1>Mensa</h1>
+          <h2>Tracker</h2>
+      </header>
+
+      <hr class="Absatz" />
+
+      <!-- Zusammenfassung der Nährstoffe-->
+      <header class="overview">
+        <div class="badge energie"><span class="value">2140 kcal</span><span class="label">Energie</span></div>
+        <div class="badge protein"><span class="value">89 g</span><span class="label">Protein</span></div>
+        <div class="badge kohlenhydrate"><span class="value">218 g</span><span class="label">Kohlenhydrate</span></div>
+        <div class="badge fett"><span class="value">94 g</span><span class="label">Fett</span></div>
+        <div class="badge gesamtkosten"><span class="value">30,30 €</span><span class="label">Gesamtkosten</span></div>
+        <div class="badge veggie"><span class="value">33,33 %</span><span class="label">Veggie</span></div>
+      </header>
+
+      <!-- Container Speiseplan & Historie -->
+      <div class="bereich-container">
+        <!-- Speiseplan -->
+        <div class="speiseplan">
+          <div class="bereich-header">Speiseplan</div>
+          <form>
+            <label for="datum">Datum wählen:</label>
+            <div class="select-wrapper">
+              <select id="datum" name="datum">
+                <option>Donnerstag, 10. Juli</option>
+                <option>Freitag, 11. Juli</option>
+                <option>Montag, 14. Juli</option>
+              </select>
+              <span class="arrow">▾</span>
+            </div>
+            <label for="gerichte">Gerichte wählen:</label>
+            <div class="select-multi-wrapper">
+              <select id="gerichte" name="gerichte" multiple size="8" aria-label="Gerichte Mehrfachauswahl">
+                <option>Spaghetti Bolognese</option>
+                <option>Spaghetti mit Grünkernbolognese</option>
+                <option>Kichererbsen-Bohnen-Pfanne mit Paprika-, Zucchini-, und Auberginenwürfeln</option>
+                <option>Solidaritätsessen: Pilaw mit Gemüse Ajvar</option>
+              </select>
+            </div>
+            <div class="button-wrapper">
+              <input type="button" value="Hinzufügen" class="hinzufuegen-btn" />
+            </div>
+          </form>
+        </div>
+
+        <!-- Historie -->
+        <div class="historie">
+          <div class="bereich-header">Historie</div>
+          <ul class="wochen-liste">
+            <li class="wochen-tag">
+              <div class="wochen-inhalt">
+                <div class="wochen-datum">Mittwoch, 08. Juli</div>
+                <div class="wochen-gericht">
+                  <a href="https://www.sw-ka.de/en/hochschulgastronomie/speiseplan/mensa_erzberger/" target="_blank">
+                    Hänchenbrust mit Reis und Brokkoli
+                  </a>
+                </div>
+                <div class="wochen-details">550 kcal, 42g Protein, 45g Kohlenh., 18g Fett</div>
+              </div>
+              <button class="entfernen-btn" title="Entfernen">x</button>
+            </li>
+            <li class="wochen-tag">
+              <div class="wochen-inhalt">
+                <div class="wochen-datum">Dienstag, 07. Juli</div>
+                <div class="wochen-gericht">
+                  <a href="https://www.sw-ka.de/en/hochschulgastronomie/speiseplan/mensa_erzberger/" target="_blank">
+                    Linsencurry mit Süßkartoffeln und Kokosmilch
+                  </a>
+                </div>
+                <div class="wochen-details">670 kcal, 19g Protein, 78g Kohlenh., 28g Fett</div>
+              </div>
+              <button class="entfernen-btn" title="Entfernen">x</button>
+            </li>
+            <li class="wochen-tag">
+              <div class="wochen-inhalt">
+                <div class="wochen-datum">Montag, 06. Juli</div>
+                <div class="wochen-gericht">
+                  <a href="https://www.sw-ka.de/en/hochschulgastronomie/speiseplan/mensa_erzberger/" target="_blank">
+                    Spaghetti Carbonara
+                  </a>
+                </div>
+                <div class="wochen-details">920 kcal, 28g Protein, 95g Kohlenh., 48g Fett</div>
+              </div>
+              <button class="entfernen-btn" title="Entfernen">x</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slogan -->
+      <footer>
+        <h3 style="text-align: center;">Gesundes Essen für gutes Geld!</h3>
+      </footer>
+    </div>
+  </body>
+</html>
