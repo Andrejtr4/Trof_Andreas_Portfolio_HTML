@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #333;
+}
+
+.ueberschrift h1,
+.ueberschrift h2 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Container der gesamten Seite */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Trennlinie */
+hr.Absatz {
+  border: none;
+  height: 2px;
+  background: #8b8b8b;
+  margin: 15px 0 20px;
+}
+
+/* Zusammenfassung der Nährstoffe */
+header.overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+.badge {
+  flex: 1 1 160px;
+  max-width: 220px;
+  padding: 17px;
+  border-radius: 22px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #b1b1b1;
+  box-sizing: border-box;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.badge .value {
+  font-size: 1.25em;
+  display: block;
+}
+.badge .label {
+  font-size: 0.93em;
+  font-weight: lighter;
+  display: block;
+}
+.badge.energie { background: #008cff; }
+.badge.protein { background: #ff9800; }
+.badge.kohlenhydrate { background: #e53935; }
+.badge.fett { background: #00bfa5; }
+.badge.gesamtkosten { background: #607d8b; }
+.badge.veggie { background: #388e3c; }
+.badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Container Speiseplan & Historie */
+.bereich-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Gemeinsames Layout */
+.speiseplan, .historie {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 22px 16px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  flex: 1 1 460px;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  position: relative;
+}
+
+/* Überschrift der Bereiche */
+.bereich-header {
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  background: #2196f3;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 17px;
+  border-radius: 8px;
+  border: 1.5px solid #2196f3;
+}
+
+/* Auswahlliste */
+label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+  display: block;
+}
+.select-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
+  font-size: 1em;
+}
+
+/* Pfeil rechts im Select */
+.select-wrapper .arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555;
+}
+
+/* Mehrfachauswahl (Gerichte) */
+.select-multi-wrapper select[multiple] {
+  width: 100%;
+  min-height: 270px;     
+  border: 1px solid #a0a0a0;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+  font-size: 1em;
+}
+
+/* Bessere Tastaturbedienung */
+select:focus-visible,
+.hinzufuegen-btn:focus-visible,
+.entfernen-btn:focus-visible,
+.wochen-gericht a:focus-visible {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+/* Hinzufügen Button */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.hinzufuegen-btn {
+  background-color: #008cff;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+.hinzufuegen-btn:hover {
+  opacity: 0.9;
+}
+
+/* Historie */
+.wochen-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wochen-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.wochen-inhalt {
+  flex-grow: 1;
+}
+.wochen-datum {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.wochen-gericht a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #008cff;
+  text-decoration: none;
+}
+.wochen-gericht a:hover {
+  text-decoration: underline;
+}
+.wochen-details {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Entfernen (x) */
+.entfernen-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bereich-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .speiseplan, .historie {
+    width: 97vw;
+    max-width: 99vw;
+  }
+  header.overview {
+    max-width: 100vw;
+    gap: 8px;
+  }
+}
